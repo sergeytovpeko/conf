@@ -1,0 +1,41 @@
+export BASH_ENV=~/.bash_profile
+shopt -s expand_aliases
+if [ -f ~/.bashrc ]; then
+    source ~/.bashrc
+fi
+
+if [ -f ~/.bashbl ]; then
+     source ~/.bashbl
+fi
+
+if [ -f ~/.bash_helpers.sh ]; then
+    source ~/.bash_helpers.sh
+fi
+
+export BLSRC=/Users/niagara/githome/backlinks/src
+export GOROOT=/Users/niagara/go1.8.1/go
+export GOPATH=/Users/niagara/githome/backend-v3.git
+export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+
+export BLINC=$HOME/githome/backlinks.git/src/
+export BLLIB=$HOME/githome/backlinks.git/.cmake/build/lib/
+
+export DYLD_LIBRARY_PATH=~/githome/backlinks.git/.cmake/build/lib/:/opt/local/lib:$DYLD_LIBRARY_PATH
+export C_INCLUDE_PATH=/opt/local/include:$C_INCLUDE_PATH
+
+# deprecated openssl issue
+export DYLD_LIBRARY_PATH=/usr/local/opt/openssl101/lib:$DYLD_LIBRARY_PATH
+export C_INCLUDE_PATH=/usr/local/opt/openssl101/include:$C_INCLUDE_PATH
+
+
+# For brew to work around rate requests limit
+export HOMEBREW_GITHUB_API_TOKEN="0d8cbe743d0a0ecb312425367bb4b69128ce9d33"
+
+export TMUK_STORAGEPORT=1066
+export TMUK_DBSTATPORT=1067
+export TMUK_GRPCPORT=1069
+export TMUK_DBPATH=/
+# brew version
+# export PATH="/usr/local/opt/m4/bin:$PATH"
+
+alias ssh="ssh -A"
